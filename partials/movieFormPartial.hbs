@@ -1,0 +1,8 @@
+<form class="movie-form" action="/updateMovie/{{movie._id}}" method="POST">
+
+  <input type="text" value="{{movie.title}}" placeholder="title" name="title">
+  <input type="text" value="{{movie.director}}" placeholder="director" name="director">
+  <textarea placeholder="desciption" rows="4" name="description">{{movie.description}}</textarea>
+
+  <button type="submit">Update Movie</button>
+</form>

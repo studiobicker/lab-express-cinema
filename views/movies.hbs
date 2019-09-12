@@ -1,0 +1,12 @@
+{{>siteHeaderPartial}}
+
+<main class="site-main">
+  <div class="wrap">
+    <p>Click on the movies to check the showtimes</p>
+    <div class="movie-grid">
+      {{#each allMovies}}
+      {{> moviePartial this }}
+      {{/each}}
+    </div>
+  </div>
+</main>

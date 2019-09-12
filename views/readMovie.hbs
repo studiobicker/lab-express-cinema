@@ -1,0 +1,32 @@
+{{> siteHeaderPartial}}
+<main class="site-main">
+  <div class="wrap">
+    <div class="movie-single">
+      <img src="{{movie.image}}">
+      <div class="movie-data">
+        <h2 class="movie-title">{{movie.title}}</h2>
+        <h3 class="movie-director">Director: {{movie.director}}</h3>
+        <div class="stars">
+          <h4>Stars</h4>
+          <ul>
+            {{#each movie.stars }}
+            <li>{{this}} </li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="movie-description">
+          <p>{{movie.description}}</p>
+        </div>
+        <p>
+          {{#each movie.showtimes }}
+          {{this}} |
+          {{/each}}
+        </p>
+        <ul class="movie-menu">
+          <li><a href="/editMovie/{{movie._id}}">Edit movie</a></li>
+          <li><a href="/deleteMovie/{{movie._id}}">Delete movie</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
